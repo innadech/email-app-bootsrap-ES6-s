@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/html/sign_up.html">Sign up</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul id="elUl" class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/html/sign_in.html">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/all_email.html">All email</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/address.html">Address</a>
+            </li>
+            <li class="nav-item">
+              <a href="/html/compose.html" class="nav-link">Compose</a>
+            </li>
+            <li class="nav-item">
+              <a
+                id="elCurrentAccount"
+                class="nav-link disabled"
+                aria-disabled="true"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="container-fluid mt-3 bg-light-subtle border border-primary-subtle rounded-3"
+    >
+      <div class="text-center">
+        <h2>Compose</h2>
+      </div>
+      <div
+        id="elContainerCompose"
+        style="height: 600px"
+        class="container-fluid mt-3 bg-light-subtle border border-primary-subtle rounded-3"
+      >
+        <div
+          id="elComposeBox"
+          style="height: 500px"
+          class="container p-4 bg-light-subtle border border-primary-subtle rounded-3"
+        >
+          <form id="elFormCompose" action="">
+            <div style="height: 150px">
+              <div>
+                <div class="input-group">
+                  <span class="input-group-text">To</span>
+                  <input
+                    id="elRecipient"
+                    type="text"
+                    class="form-control"
+                    placeholder="Username"
+                    aria-label="Username"
+                    aria-describedby="addon-wrapping"
+                    name="recipient"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">From</span>
+                  <span id="elAccountEmail" class="form-control"></span>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text" id="addon-wrapping"
+                    >Subject</span
+                  >
+                  <input
+                    name="subject"
+                    id="elSubject"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div style="width: 100%; height: 250px">
+              <!-- <p class="fs-3">Text</p> -->
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="elText"
+                  style="height: 200px"
+                  name="text"
+                ></textarea>
+                <label for="floatingTextarea2">Message</label>
+              </div>
+            </div>
+            <div style="width: 20%; height: 100px">
+              <div class="container overflow-hidden text-center">
+                <div class="row gx-5">
+                  <div class="col">
+                    <div
+                      class="p-2 bg-light-subtle border border-primary-subtle rounded-3"
+                    >
+                      <button
+                        id="elSend"
+                        type="submit"
+                        class="btn btn-primary btn-lg"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../js/controller/controller-compose.js"></script>
+    <script type="module" src="../js/controller/controller-navbar.js"></script>
+  </body>
+</html>

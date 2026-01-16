@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/html/sign_up.html">Sign up</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul id="elUl" id="elUl" class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/html/sign_in.html">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/all_email.html">All email</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/address.html">Address</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./compose.html">Compose</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                aria-disabled="true"
+                id="elCurrentAccount"
+                >-</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/html/sign_up.html">Log out</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="elSignUpPage"
+      style="width: 70%; height: 600px"
+      class="container-fluid mt-5 bg-light-subtle border border-primary-subtle rounded-3"
+    >
+      <!-- elSignUpContainer -->
+      <form id="elFormSignUp">
+        <div
+          style="width: 50%; height: 500px"
+          class="container-fluid mt-5 bg-light-subtle"
+        >
+          <p class="fs-2 text-center">Sign up</p>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="emailSignup"
+              name="address"
+              placeholder="name@example.com"
+              required
+              minlength="2"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="passwordSignup"
+              name="password"
+              placeholder="Password"
+              required
+              minlength="3"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="repeatpasswordSignup"
+              name="repeatpassword"
+              placeholder="Password"
+              required
+              minlength="3"
+            />
+            <label for="floatingPassword">Password Repeat</label>
+          </div>
+          <div class="form-floating mt-3">
+            <input
+              type="text"
+              class="form-control"
+              id="firstnameSignup"
+              name="firstname"
+              placeholder="Password"
+              required
+              minlength="1"
+            />
+            <label for="floatingPassword">Name</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="lastnameSignup"
+              name="lastname"
+              placeholder="Password"
+              required
+              minlength="3"
+            />
+            <label for="floatingPassword">Lastname</label>
+          </div>
+          <div class="text-center mt-5">
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg"
+              id="elRegisterButton"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../js/controller/controller-sign-up.js"></script>
+  </body>
+</html>
