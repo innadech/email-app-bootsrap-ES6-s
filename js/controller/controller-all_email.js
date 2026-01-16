@@ -1,0 +1,66 @@
+import { clientAuthorize } from '../model/client/clientAccount.js'
+import {
+  renderEmailsListEmailSheet,
+  renderEmailsList,
+  renderelAllEmailBox,
+  renderEmailsListOutcome,
+} from '../view/view-all_email.js'
+import {
+  getEmailById,
+  clientReceiveIncoming,
+  clientReceiveOutcoming,
+  clientInbox,
+  clientOutbox,
+  filtrateEmailsByQuery,
+  removeEmailById,
+} from '../model/client/clientEmails.js'
+
+function handleEmailSheet(id) {
+  console.log('handleEmailSheet')
+  const email = getEmailById(id)
+  if (email) renderEmailsListEmailSheet(email)
+}
+function handleSearchEmail(query) {
+  const findedContactByQuery = filtrateEmailsByQuery(query)
+  console.log(findedContactByQuery)
+  renderEmailsList(findedContactByQuery)
+}
+
+function handleLoadPageAllEmail() {
+  const isAuthorized = clientAuthorize()
+  if (isAuthorized) {
+    clientReceiveIncoming()
+    renderEmailsList(clientInbox)
+  } else {
+    renderelAllEmailBox()
+  }
+}
+function handleClientReceiveIncoming() {
+  clientReceiveIncoming()
+  renderEmailsList(clientInbox)
+}
+
+function handleClientReceiveOutcoming() {
+  clientReceiveOutcoming()
+  renderEmailsListOutcome(clientOutbox)
+}
+function handleRemoveEmailIncoming(id) {
+  removeEmailById(id)
+  clientReceiveIncoming()
+  renderEmailsList(clientInbox)
+}
+function handleRemoveEmailOutcoming(id) {
+  removeEmailById(id)
+  clientReceiveOutcoming()
+  renderEmailsListOutcome(clientOutbox)
+}
+
+export {
+  handleEmailSheet,
+  handleLoadPageAllEmail,
+  handleClientReceiveIncoming,
+  handleClientReceiveOutcoming,
+  handleSearchEmail,
+  handleRemoveEmailIncoming,
+  handleRemoveEmailOutcoming,
+}
